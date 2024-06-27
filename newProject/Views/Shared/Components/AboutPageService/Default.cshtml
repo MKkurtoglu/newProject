@@ -1,0 +1,34 @@
+﻿@using EntitiyLayer.Concrete
+@model List<Services>
+<div class="greennature-color-wrapper  gdlr-show-all no-skin" style="background-color: #f0f0f0; padding-top: 70px; padding-bottom: 25px; ">
+
+    <div class="container">
+
+
+        @foreach (var item in Model)
+        {
+            <div class="four columns">
+
+                <div class="greennature-ux column-service-ux">
+                    <div class="greennature-item greennature-column-service-item greennature-type-1-caption">
+
+                        <div class="column-service-image"><img src="@item.Image" alt="" width="80" height="80" /></div>
+                        <div class="column-service-content-wrapper">
+                            <h3 class="column-service-title">@item.Title</h3>
+                            @* <div class="column-service-caption greennature-skin-info">@item.Description</div> *@
+                            <div class="column-service-content greennature-skin-content">
+                                <p>@item.Description</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+
+            
+}
+        </div>
+        
+    <div class="clear"></div>
+</div>

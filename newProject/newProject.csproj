@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\majestic-master\.DS_Store" />
+    <None Include="wwwroot\majestic-master\documentation\.DS_Store" />
+    <None Include="wwwroot\majestic-master\fonts\.DS_Store" />
+    <None Include="wwwroot\majestic-master\fonts\Roboto\.DS_Store" />
+    <None Include="wwwroot\majestic-master\images\.DS_Store" />
+    <None Include="wwwroot\majestic-master\images\auth\.DS_Store" />
+    <None Include="wwwroot\majestic-master\images\faces\.DS_Store" />
+    <None Include="wwwroot\majestic-master\js\.DS_Store" />
+    <None Include="wwwroot\majestic-master\pages\.DS_Store" />
+    <None Include="wwwroot\majestic-master\pages\charts\.DS_Store" />
+    <None Include="wwwroot\majestic-master\pages\forms\.DS_Store" />
+    <None Include="wwwroot\majestic-master\pages\icons\.DS_Store" />
+    <None Include="wwwroot\majestic-master\pages\samples\.DS_Store" />
+    <None Include="wwwroot\majestic-master\pages\tables\.DS_Store" />
+    <None Include="wwwroot\majestic-master\pages\ui-features\.DS_Store" />
+    <None Include="wwwroot\majestic-master\scss\.DS_Store" />
+    <None Include="wwwroot\majestic-master\scss\components\.DS_Store" />
+    <None Include="wwwroot\majestic-master\scss\mixins\.DS_Store" />
+    <None Include="wwwroot\majestic-master\vendors\.DS_Store" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.102.2" />
+    <PackageReference Include="EPPlus" Version="7.0.8" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0" />
+    <PackageReference Include="Ninject" Version="3.3.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj" />
+    <ProjectReference Include="..\EntitiyLayer\EntitiyLayer.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,42 @@
+﻿@model EntitiyLayer.Concrete.Attention
+@{
+    ViewData["Title"] = "updateAttention";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+}
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Yayın Güncelleme Sayfası</h4>
+            <form  method="post">
+
+                @*@Html.Label("Service ID")
+                @Html.TextBoxFor(x=>x.ServiceID,new {@class = "form-control"})*@
+                @Html.HiddenFor(x => x.ActionID)
+                
+
+                @Html.Label("Yayın Adı")
+                <input type="text" asp-for="Title" class="form-control" />
+                <br />
+                @Html.Label("Yayın Alt Başlık")
+                <textarea cols="30" rows="5" asp-for="Description1" class="form-control-file" placeholder="açıklama giriniz"></textarea>
+
+                <br />
+                @Html.Label("Yayın Açıklama")
+                <textarea cols="30" rows="5" asp-for="Description2" class="form-control-file" placeholder="açıklama giriniz"></textarea>
+
+                <br />
+
+                <br />
+                @Html.Label("İkon")
+                <input type="text" asp-for="Icon" asp-action="updateAttention" class="form-control-file" />
+
+                <br />
+                @* @Html.Label("Service Resim")
+                <input type="text" asp-for="ım" class="form-control" />
+                <br /> *@
+                <button class="btn btn-danger">Yayın Güncelle</button>
+            </form>
+        </div>
+    </div>
+</div>

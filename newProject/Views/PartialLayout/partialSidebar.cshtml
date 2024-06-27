@@ -1,0 +1,182 @@
+﻿@* <div class="container-fluid page-body-wrapper"> *@
+    <!-- partial:../../partials/_sidebar.html -->
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="../../index.html">
+                    <i class="mdi mdi-home menu-icon"></i>
+                    <span class="menu-title">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  href="/service/index/">
+                    <i class="mdi mdi-circle-outline menu-icon"></i>
+                    <span class="menu-title">Hizmetlerimiz</span>
+                    @* <i class="menu-arrow"></i> *@
+                </a>
+                @* <div class="collapse" id="ui-basic">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/buttons.html">Buttons</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/typography.html">Typography</a></li>
+                    </ul> açıldığı kısım burası. birden fazla seçenek sunma açılma kısmı
+                </div> *@
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Team/index/">
+                    <i class="mdi mdi-view-headline menu-icon"></i>
+                    <span class="menu-title">Takım Arkadaşlarımız</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="~/majestic-master/pages/charts/chartjs.html">
+                    <i class="mdi mdi-chart-pie menu-icon"></i>
+                    <span class="menu-title">Grafikler</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="~/majestic-master/pages/tables/basic-table.html">
+                    <i class="mdi mdi-grid-large menu-icon"></i>
+                    <span class="menu-title">İstatistikler</span>
+                </a>
+            </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/SocialMedia/index">
+                <i class="mdi mdi-emoticon menu-icon"></i>
+                <span class="menu-title">Sosyal Medya</span>
+            </a>
+        </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/News/index">
+                    <i class="mdi mdi-emoticon menu-icon"></i>
+                    <span class="menu-title">Duyurular</span>
+                </a>
+            </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Attention/index">
+                <i class="mdi mdi-emoticon menu-icon"></i>
+                <span class="menu-title">Harekete Geç Yazıları</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/About/index">
+                <i class="mdi mdi-emoticon menu-icon"></i>
+                <span class="menu-title">Hakkımızda</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/RecentProject/index">
+                <i class="mdi mdi-emoticon menu-icon"></i>
+                <span class="menu-title">Son Projeler</span>
+            </a>
+        </li>
+        
+
+        <li class="nav-item">
+            <a class="nav-link" href="/Contact/index">
+                <i class="mdi mdi-emoticon menu-icon"></i>
+                <span class="menu-title">Gelen Mesajlar</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/address/index">
+                <i class="mdi mdi-emoticon menu-icon"></i>
+                <span class="menu-title">Adres Bilgileri </span>
+            </a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/Image/index/">
+                <i class="mdi mdi-emoticon menu-icon"></i>
+                <span class="menu-title">Görseller </span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Report/index/">
+                <i class="mdi mdi-emoticon menu-icon"></i>
+                <span class="menu-title">Raporlar </span>
+            </a>
+        </li>
+        
+        
+            @* <li class="nav-item"> *@
+                @* <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                    <i class="mdi mdi-account menu-icon"></i>
+                    <span class="menu-title">User Pages</span>
+                    <i class="menu-arrow"></i>
+                </a> *@
+                @* <div class="collapse" id="auth">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"> <a class="nav-link" href="../../pages/samples/login.html"> Login </a></li>
+                        <li class="nav-item"> <a class="nav-link" href="../../pages/samples/login-2.html"> Login 2 </a></li>
+                        <li class="nav-item"> <a class="nav-link" href="../../pages/samples/register.html"> Register </a></li>
+                        <li class="nav-item"> <a class="nav-link" href="../../pages/samples/register-2.html"> Register 2 </a></li>
+                        <li class="nav-item"> <a class="nav-link" href="../../pages/samples/lock-screen.html"> Lockscreen </a></li>
+                    </ul>
+                </div> *@
+            @* </li> *@
+        <li class="nav-item">
+            <a class="nav-link" href="/Profile/index">
+                <i class="mdi mdi-emoticon menu-icon"></i>
+                <span class="menu-title">Admin İşlemleri</span>
+            </a>
+        </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Default/index">
+                    <i class="mdi mdi-file-document-box-outline menu-icon"></i>
+                    <span class="menu-title">Siteye Geçiş Yap</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- partial -->
+    @* <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+
+                @RenderBody()
+            </div> *@
+
+            @*  <div class="col-lg-6 grid-margin stretch-card">
+            <div class="card">
+            <div class="card-body">
+            <h4 class="card-title">Area chart</h4>
+            <canvas id="areaChart"></canvas>
+            </div>
+            </div>
+            </div>
+            <div class="col-lg-6 grid-margin stretch-card">
+            <div class="card">
+            <div class="card-body">
+            <h4 class="card-title">Doughnut chart</h4>
+            <canvas id="doughnutChart"></canvas>
+            </div>
+            </div>
+            </div>
+            </div> *@
+            @* <div class="row">
+            <div class="col-lg-6 grid-margin grid-margin-lg-0 stretch-card">
+            <div class="card">
+            <div class="card-body">
+            <h4 class="card-title">Pie chart</h4>
+            <canvas id="pieChart"></canvas>
+            </div>
+            </div>
+            </div>
+            <div class="col-lg-6 grid-margin grid-margin-lg-0 stretch-card">
+            <div class="card">
+            <div class="card-body">
+            <h4 class="card-title">Scatter chart</h4>
+            <canvas id="scatterChart"></canvas>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div> *@
+            <!-- content-wrapper ends -->
+            <!-- partial:../../partials/_footer.html -->
+            <!-- partial -->
+        @* </div> *@
+        <!-- main-panel ends -->
+    @* </div> *@
+    <!-- page-body-wrapper ends -->
+@* </div> *@

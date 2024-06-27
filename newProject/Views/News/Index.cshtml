@@ -1,0 +1,74 @@
+﻿@using EntitiyLayer.Concrete
+@model List<News>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Takım Arkadaşlarımız</h4>
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            
+                            <th>Duyuru Resim</th>
+                            <th>Duyuru Tarih</th>
+                            <th>Başlık</th>
+                            <th>İçerik</th>
+                            <th>Durum</th>
+                            <th>Sil</th>
+                            <th>Düzenle</th>
+                            <th>Aktif Yap</th>
+                            <th>Pasif Yap</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.NewsID</td>
+                                <td class="py-1">
+                                    <img src="@item.Image" alt="image" />
+                                </td>
+                                
+                                <td>@item.NewsDate</td>
+                                <td>@item.Title</td>
+                                <td>@item.Description</td>
+                                <td>
+                                    @if (item.Status==true)
+                                    {
+                                        <text>Aktif</text>
+                                    }
+                                    else
+                                    {
+                                        <text>Aktif Değil</text>
+                                    }
+                                </td>
+                                <td><a href="/News/deleteNews/@item.NewsID" class="btn btn-danger">Duyuru Sil</a></td>
+                                <td><a href="/News/updateNews/@item.NewsID" class="btn btn-danger">Duyuru Güncelle</a></td>
+                                <td><a href="/News/statusTrue/@item.NewsID" class="btn btn-warning">Aktif Güncelle</a></td>
+                                <td><a href="/News/statusFalse/@item.NewsID" class="btn btn-warning">Pasif Güncelle</a></td>
+
+
+                            </tr>
+                        }
+
+
+                    </tbody>
+                    <a href="/News/addNews/" class="btn btn-primary">Duyuru Ekle</a>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

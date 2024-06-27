@@ -1,0 +1,52 @@
+﻿@using EntitiyLayer.Concrete
+@model List<RecentProject>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Projeler</h4>
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Resim</th>
+
+                            <th>Başlık</th>
+                            <th>Alt Başlık</th>
+                            <th>Açıklama</th>
+                            <th>Sil</th>
+                            <th>Düzenle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                @* <img src="~/majestic-master/images/faces/face1.jpg" alt="image" /> *@
+                                <td>@item.ProjectID</td>
+                                <td class="py-1">
+                                    <img src="@item.Image" alt="image" />
+                                </td>
+                                <td>@item.Title</td>
+                                <td>@item.Description1</td>
+                                <td>@item.Description2</td>
+                                <td><a href="/RecentProject/deleteRecent/@item.ProjectID" class="btn btn-danger">Proje Sil</a></td>
+                                <td><a href="/RecentProject/updateRecent/@item.ProjectID" class="btn btn-danger">Proje Güncelle</a></td>
+
+
+                            </tr>
+                        }
+
+
+                    </tbody>
+                    <a href="/RecentProject/addRecent/" class="btn btn-primary">Proje Ekle</a>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

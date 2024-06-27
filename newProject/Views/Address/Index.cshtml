@@ -1,0 +1,53 @@
+﻿@using EntitiyLayer.Concrete
+@model List<Address>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Adres</h4>
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Adres Açılama 1</th>
+                            <th>Adres Açılama 2</th>
+                            <th>Adres Açılama 3</th>
+                            <th>Adres Açılama 4</th>
+                            <th>Harita Bilgi</th>
+                            <th>Düzenle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+
+                                <td>@item.AddressID</td>
+
+                                <td>@item.Despriction1</td>
+                                <td>@item.Despriction2</td>
+                                <td>@item.Despriction3</td>
+                                <td>@item.Despriction4</td>
+                                <td>@item.MapInfo</td>
+                                
+                                <td><a href="/Address/updateAddress/@item.AddressID" class="btn btn-danger">Adres Güncelle</a></td>
+
+
+                            </tr>
+                        }
+
+
+                    </tbody>
+                   
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

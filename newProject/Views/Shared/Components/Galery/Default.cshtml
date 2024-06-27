@@ -1,0 +1,21 @@
+﻿@using EntitiyLayer.Concrete
+@model List<Image>
+<div class="with-sidebar-wrapper">
+    <section id="content-section-1">
+        <div class="section-container container">
+            <div class="greennature-gallery-item greennature-item" style="margin-bottom: 40px;">
+                @foreach (var item in Model)
+                {
+
+                
+                <div class="gallery-column four columns">
+                    <div class="gallery-item">
+                        <a href="@item.ImageURL" data-fancybox-group="greennature-gal-1" data-rel="fancybox"><img src="@item.ImageURL" alt="" width="400" height="300" /></a><span class="gallery-caption">@item.Title</span>
+                    </div>
+                </div>
+                }
+            </div>
+            <div class="clear"></div>
+        </div>
+    </section>
+</div>

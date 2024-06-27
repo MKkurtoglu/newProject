@@ -1,0 +1,52 @@
+﻿@using EntitiyLayer.Concrete
+@model List<About>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Hakkımızda</h4>
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            
+                            <th>Başlık</th>
+                            <th>Alt Başlık</th>
+                            <th>Açıklama</th>
+                            <th>Sil</th>
+                            <th>Düzenle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                @* <td class="py-1">
+                                    <img src="~/majestic-master/images/faces/face1.jpg" alt="image" />
+                                </td> *@
+                                <td>@item.AboutID</td>
+                                <td>@item.Title</td>
+                                <td>@item.Descpriction1</td>
+                                <td>@item.Descpriction2</td>
+                                <td><a href="/About/deleteAbout/@item.AboutID" class="btn btn-danger">Hakkında Sil</a></td>
+                                <td><a href="/About/updateAbout/@item.AboutID" class="btn btn-danger">Hakkında Güncelle</a></td>
+
+
+                            </tr>
+                        }
+
+
+                    </tbody>
+                    @* <a href="/Team/addTeam/" class="btn btn-primary">Personel Ekle</a> *@
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

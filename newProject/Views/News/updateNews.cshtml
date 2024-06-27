@@ -1,0 +1,39 @@
+﻿@model EntitiyLayer.Concrete.News
+@{
+    ViewData["Title"] = "updateNews";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Duyuru Güncelleme Sayfası</h4>
+            <form asp-action="updateNews" asp-controller="News" method="post">
+
+                @*@Html.Label("Service ID")
+                @Html.TextBoxFor(x=>x.ServiceID,new {@class = "form-control"})*@
+                @Html.HiddenFor(x => x.NewsID)
+                @Html.HiddenFor(x=>x.NewsDate)
+                @Html.HiddenFor(x=>x.Status)
+                
+                @Html.Label("Service Adı")
+                <input type="text" asp-for="Title" class="form-control" />
+                <br />
+                @Html.Label("Service Açıklama")
+                <textarea cols="30" rows="5" asp-for="Description" class="form-control-file" placeholder="açıklama giriniz"></textarea>
+
+                <br />
+                @* @Html.Label("Service Resim")
+                <input type="text" asp-for="ım" class="form-control" />
+                <br /> *@
+                <div class="form-group">
+                    <label for="Resim">Resim Uzantısı</label>
+                    @* <input type="text" asp-for="Description" class="form-control" placeholder="Açıklama"> *@
+                    <input type="text" asp-for="Image" class="form-control" placeholder="Resim Uzantısı">
+                </div>
+                <br />
+                <button class="btn btn-danger">Duyuru Güncelle</button>
+            </form>
+        </div>
+    </div>
+</div>

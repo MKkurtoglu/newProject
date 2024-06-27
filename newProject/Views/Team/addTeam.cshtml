@@ -1,0 +1,67 @@
+﻿@model EntitiyLayer.Concrete.Team
+@{
+    ViewData["Title"] = "addTeam";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Personel Ekleme Sayfası</h4>
+            <p class="card-description">
+                Personel Eklemek için aşağıdaki boşlukları doldurunuz
+            </p>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label for="Başlık">İsim</label>
+                    <input type="text" asp-for="PersonName" class="form-control" placeholder="Name">
+                    <span asp-validation-for="PersonName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="Açıklama">Görev</label>
+                    <input type="text" asp-for="Title" class="form-control" placeholder="Görev">
+                    <span asp-validation-for="Title" class="text-danger"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="Açıklama">Image URL</label>
+                    <input type="text" asp-for="ImageURL" class="form-control" placeholder="Image URL">
+                    <span asp-validation-for="ImageURL" class="text-danger"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="Açıklama">Faceboook URL</label>
+                    <input type="text" asp-for="FacebookURL" class="form-control" placeholder="Facebook URL">
+                </div>
+                <div class="form-group">
+                    <label for="Açıklama">Twitter</label>
+                    <input type="text" asp-for="TwitterURL" class="form-control" placeholder="Twitter URL">
+                </div>
+                <div class="form-group">
+                    <label for="Açıklama">Website</label>
+                    <input type="text" asp-for="WebsiteURL" class="form-control" placeholder="Website URL">
+                </div>
+                @* <div class="form-group">
+                <label>File upload</label>
+                <input type="file" name="img[]" class="file-upload-default">
+                <div class="input-group col-xs-12">
+                <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                <span class="input-group-append">
+                <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                </span>
+                </div> *@
+                @* </div> *@
+                
+                @* <div class="form-group">
+                <label for="exampleTextarea1">Textarea</label>
+                <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                </div> *@
+                <br />
+                <button class="btn btn-primary mr-2">Ekle</button>
+                <a href="/service/index" class="btn btn-primary mr-2">Vazgeç</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,29 @@
+﻿@model EntitiyLayer.Concrete.Services
+@{
+    ViewData["Title"] = "updateService";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Servis Güncelleme Sayfası</h4>
+<form asp-action="updateService" asp-controller="Service" method="post">
+   
+    @*@Html.Label("Service ID")
+    @Html.TextBoxFor(x=>x.ServiceID,new {@class = "form-control"})*@
+    @Html.HiddenFor(x=>x.ServiceID)
+    @Html.Label("Service Adı")
+    <input type="text" asp-for="Title" class="form-control" />
+    <br />
+    @Html.Label("Service Açıklama")
+    <input type="text" asp-for="Description" class="form-control" />
+    <br />
+    @Html.Label("Service Resim")
+    <input type="text" asp-for="Image" class="form-control" />
+    <br />
+    <button class="btn btn-danger" >Hizmet Güncelle</button>
+</form>
+        </div>
+    </div>
+</div>

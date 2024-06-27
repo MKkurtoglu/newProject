@@ -1,0 +1,30 @@
+﻿@using EntitiyLayer.Concrete
+@model List<Attention>
+
+<section id="content-section-2">
+    <div class="greennature-color-wrapper  gdlr-show-all greennature-skin-brown-column-service" style="background-color: #2d2418;  border-top: 5px solid #3f3221; padding-top: 0px; padding-bottom: 0px; ">
+        <div class="container">
+            @foreach (var item in Model)
+            {
+
+
+                <div class="four columns">
+                    <div class="greennature-ux column-service-ux">
+                        <div class="greennature-item greennature-column-service-item greennature-type-2" style="margin-bottom: 0px;">
+                            <div class="column-service-image"><img src="@item.Icon" alt="" width="80" height="80" /></div>
+                            <div class="column-service-content-wrapper">
+                                <h3 class="column-service-title">@item.Description1</h3>
+                                <div class="column-service-content greennature-skin-content">
+                                    <p>@item.Description2</p>
+                                </div><a class="column-service-read-more" href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</section>

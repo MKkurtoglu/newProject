@@ -1,0 +1,49 @@
+﻿@using EntitiyLayer.Concrete
+@model List<SocialMedia>
+
+<div class="top-navigation-right">
+    <div class="top-social-wrapper">
+        @foreach (var item in Model)
+        {
+            
+        
+        <td class="@item.Title">
+            <a href="@item.Url" target="_blank">
+                <i class="@item.Icon"></i>
+            </a>
+        </td>
+        @* <div class="social-icon">
+                <a href="@item.Url" target="_blank">
+                <i class="fa fa-flickr"></i>
+            </a>
+        </div>
+        <div class="social-icon">
+                <a href="@item.Url" target="_blank">
+                <i class="fa fa-linkedin"></i>
+            </a>
+        </div>
+        <div class="social-icon">
+                <a href="@item.Url" target="_blank">
+                <i class="fa fa-pinterest-p"></i>
+            </a>
+        </div>
+        <div class="social-icon">
+                <a href="@item.Url" target="_blank">
+                <i class="fa fa-tumblr"></i>
+            </a>
+        </div>
+        <div class="social-icon">
+                <a href="@item.Url" target="_blank">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </div>
+        <div class="social-icon">
+                <a href="@item.Url" target="_blank">
+                <i class="fa fa-vimeo"></i>
+            </a>
+        </div>
+        <div class="clear"></div> *@
+        }
+
+    </div>
+</div>

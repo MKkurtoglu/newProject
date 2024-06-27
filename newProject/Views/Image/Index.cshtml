@@ -1,0 +1,49 @@
+﻿@using EntitiyLayer.Concrete
+@model List<Image>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Resimler</h4>
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Resim Adresi</th>
+                            <th>Resim Başlık</th>
+                            <th>Resim Açıklama</th>
+                            <th>Sil</th>
+                            <th>Düzenle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                
+                                <td>@item.ImageID</td>
+                                <td class="py-1"> <img src="@item.ImageURL" alt="image" /> </td>
+                                <td>@item.Title</td>
+                                <td>@item.Description</td>
+                                <td><a href="/Image/deleteImage/@item.ImageID" class="btn btn-danger">Resim Sil</a></td>
+                                <td><a href="/Image/updateImage/@item.ImageID" class="btn btn-danger">Resim Güncelle</a></td>
+
+
+                            </tr>
+                        }
+
+
+                    </tbody>
+                    <a href="/Image/addImage/" class="btn btn-primary">Resim Ekle</a>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

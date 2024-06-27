@@ -1,0 +1,71 @@
+﻿@model EntitiyLayer.Concrete.Address
+@{
+    ViewData["Title"] = "updateAddress";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Adres Güncelleme Sayfası</h4>
+            <p class="card-description">
+                Adres Güncelleme için aşağıdaki boşlukları doldurunuz
+            </p>
+            <form class="forms-sample" method="post">
+                @Html.HiddenFor(x => x.AddressID)
+                <div class="form-group">
+                    <label for="Başlık">Açıklama 1</label>
+                    <input type="text" asp-for=Despriction1 class="form-control" placeholder="Açıklama">
+                    <span asp-validation-for="Despriction1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="Başlık">Açıklama 2</label>
+                    <input type="text" asp-for=Despriction2 class="form-control" placeholder="Açıklama ">
+                    <span asp-validation-for="Despriction2" class="text-danger"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="Başlık">Açıklama 3</label>
+                    <input type="text" asp-for=Despriction3 class="form-control" placeholder="Açıklama">
+                    <span asp-validation-for="Despriction3" class="text-danger"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="Başlık">Açıklama 4</label>
+                    <input type="text" asp-for=Despriction4 class="form-control" placeholder="Açıklama">
+                    <span asp-validation-for="Despriction4" class="text-danger"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="Açıklama">Harita Bilgisi</label>
+                    @* <input type="text" asp-for="Description" class="form-control" placeholder="Açıklama"> *@
+                    <textarea cols="30" rows="5" asp-for="MapInfo" class="form-control-file" placeholder="Harita Bilgisini Giriniz"></textarea>
+                    <span asp-validation-for="MapInfo" class="text-danger"></span>
+
+                </div>
+
+
+
+                @* <div class="form-group">
+                <label>File upload</label>
+                <input type="file" name="img[]" class="file-upload-default">
+                <div class="input-group col-xs-12">
+                <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                <span class="input-group-append">
+                <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                </span>
+                </div> *@
+                @* </div> *@
+
+                @* <div class="form-group">
+                <label for="exampleTextarea1">Textarea</label>
+                <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                </div> *@
+                <br />
+                <button class="btn btn-primary mr-2">Güncelle</button>
+                <a href="/Image/index" class="btn btn-primary mr-2">Vazgeç</a>
+            </form>
+        </div>
+    </div>
+</div>
+

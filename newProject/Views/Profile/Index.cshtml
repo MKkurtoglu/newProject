@@ -1,0 +1,36 @@
+﻿@model newProject.Models.ProfileViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Admin Güncelleme Sayfası</h4>
+            <form method="post">
+
+                @*@Html.Label("Service ID")
+                @Html.TextBoxFor(x=>x.ServiceID,new {@class = "form-control"})*@
+                
+                @Html.Label("Kullanıcı Adı")
+                <input type="text" asp-for="userName" class="form-control" />
+                <br />
+                @Html.Label("Mail Adresi")
+                <input type="email" asp-for="mail" class="form-control" />
+                <br />
+                @Html.Label("Telefon Numarası")
+                <input type="text" asp-for="phono" class="form-control" />
+                <br />
+                @Html.Label("Admin Şifre")
+                <input type="password" asp-for="password" class="form-control" />
+                <br />
+                @Html.Label("Admin Şifre")
+                <input type="password" asp-for="passwordConfirm" class="form-control" />
+                <br />
+                <button class="btn btn-danger">Admin Güncelle</button>
+            </form>
+        </div>
+    </div>
+</div>

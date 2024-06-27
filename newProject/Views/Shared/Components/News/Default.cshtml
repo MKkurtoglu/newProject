@@ -1,0 +1,60 @@
+﻿@using EntitiyLayer.Concrete
+@model List<News>
+
+<div class="four columns">
+    <div class="greennature-item-title-wrapper greennature-item  greennature-left-divider greennature-small ">
+        <div class="greennature-item-title-container container">
+            <div class="greennature-item-title-head">
+                <h3 class="greennature-item-title greennature-skin-title greennature-skin-border">Son Haberler</h3><a class="greennature-item-title-link" href="#">Tüm Haberlere Göz Atmak İçin</a>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="blog-item-wrapper">
+        <div class="blog-item-holder">
+            <div class="clear"></div>
+            <div class="twelve columns">
+                @foreach (var item in Model)
+                {
+                    
+               
+                <div class="greennature-item greennature-blog-widget">
+                    <div class="greennature-ux greennature-blog-widget-ux">
+                        <article id="post-852" class="post-852 post type-post status-publish format-standard has-post-thumbnail hentry category-fit-row tag-blog tag-life-style">
+                            <div class="greennature-standard-style">
+                                <div class="greennature-blog-thumbnail">
+                                    <a href="#"> <img src="@item.Image" alt="" width="400" height="400" /></a>
+                                </div>
+
+                                <div class="greennature-blog-date-wrapper">
+                                    @* <div class="greennature-blog-day">11</div>
+                                    <div class="greennature-blog-month">Dec</div> *@
+                                        <h3 class="greennature-blog-date">@item.NewsDate</h3>
+                                        <br />
+                                </div>
+
+                                <header class="post-header">
+                                    <h3 class="greennature-blog-title"><a href="#">@item.Title</a></h3>
+
+                                    @* <div class="greennature-blog-info">
+                                        <div class="blog-info blog-comment greennature-skin-info"><i class="fa fa-comment-o"></i><a href="##respond">2 <span class="greennature-tail">Comments</span></a></div>
+                                        <div class="blog-info blog-author greennature-skin-info"><i class="fa fa-pencil"></i><a href="#" title="Posts by John Maxwell" rel="author">John Maxwell</a></div>
+                                        <div class="clear"></div>
+                                    </div> *@
+                                    <div class="clear"></div>
+                                </header>
+                                    
+                                <!-- entry-header -->
+                                <div class="clear"></div>
+                            </div>
+                        </article>
+                        <!-- #post -->
+                    </div>
+                </div>
+              }
+            </div>
+           
+            
+        </div>
+    </div>
+</div>

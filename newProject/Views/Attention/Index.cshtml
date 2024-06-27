@@ -1,0 +1,57 @@
+﻿@using EntitiyLayer.Concrete
+@model List<Attention>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Yayın Sayfası</h4>
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            @* <th>Yayın ID</th> *@
+                            <th>İkon</th>
+                            <th>Başlık</th>
+                            <th>Açıklama 1</th>
+                            <th>Ana İçerik</th>
+                            
+                            <th>Sil</th>
+                            <th>Düzenle</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ActionID</td>
+                                <td class="py-1">
+                                    <img src="@item.Icon" alt="image" />
+                                </td>
+                                
+                                <td>@item.Title</td>
+                                <td>@item.Description1</td>
+                                <td>@item.Description2</td>
+                               
+                                <td><a href="/Attention/deleteAttention/@item.ActionID" class="btn btn-danger">Yayın Sil</a></td>
+                                <td><a href="/Attention/updateAttention/@item.ActionID" class="btn btn-danger">Yayın Güncelle</a></td>
+                                
+
+
+                            </tr>
+                        }
+
+
+                    </tbody>
+                    <a href="/Attention/addAttention/" class="btn btn-primary">Yayın Ekle</a>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

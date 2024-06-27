@@ -1,0 +1,42 @@
+﻿@using EntitiyLayer.Concrete
+@model List<Admin>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Admin Listesi</h4>
+            <table class="table table-bordered">
+                <tr>
+                    <th>#</th>
+                    <th>Kullanıcı Adı</th>
+                   
+                    <th>Admin Sil</th>
+                    <th>Admin Güncelle</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th>@item.AdminID</th>
+                        <th>@item.userName</th>
+
+                      
+                        <th><a href="/Admin/deleteAdmin/@item.AdminID" class="btn btn-danger">Admin Sil</a></th>
+                        <th><a href="/Admin/updateAdmin/@item.AdminID" class="btn btn-success">Admin Güncelle</a></th>
+                    </tr>
+                }
+
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<a href="/Admin/addAdmin" class="btn btn-light">Admin Ekle</a>

@@ -1,0 +1,37 @@
+﻿@using EntitiyLayer.Concrete
+@model List<Address>
+<div class="footer-column three columns" id="footer-widget-2">
+    <div id="text-9" class="widget widget_text greennature-item greennature-widget">
+        <h3 class="greennature-widget-title">Contact Info</h3>
+        <div class="clear"></div>
+        <div class="textwidget">
+            @foreach (var item in Model)
+            {
+
+
+                <span class="clear"></span>
+
+                <span class="greennature-space" style="margin-top: -6px; display: block;"></span> <th>Address: @item.Despriction1 </th>
+
+                <span class="clear"></span>
+
+                <span class="greennature-space" style="margin-top: 10px; display: block;"></span>
+
+                <i class="greennature-icon fa fa-phone" style="vertical-align: middle; color: #aaa; font-size: 16px; "></i> <th>@item.Despriction2 </th>
+
+                <span class="clear"></span>
+
+                <span class="greennature-space" style="margin-top: 10px; display: block;"></span>
+
+                <i class="greennature-icon fa fa-mobile" style="vertical-align: middle; color: #aaa; font-size: 20px; "></i> <th>@item.Despriction3 </th>
+
+                <span class="clear"></span>
+
+                <span class="greennature-space" style="margin-top: 10px; display: block;"></span>
+
+                <i class="greennature-icon fa fa-envelope-o" style="vertical-align: middle; color: #aaa; font-size: 16px; "></i> <th>@item.Despriction4 </th>
+            }
+
+        </div>
+    </div>
+</div>

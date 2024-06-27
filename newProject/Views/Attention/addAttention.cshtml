@@ -1,0 +1,57 @@
+﻿@model EntitiyLayer.Concrete.Attention
+
+@{
+    ViewData["Title"] = "addAttention";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Yayın Ekleme Sayfası</h4>
+            <p class="card-description">
+                Yayın Eklemek için aşağıdaki boşlukları doldurunuz
+            </p>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label for="Başlık">Başlık</label>
+                    <input type="text" asp-for=Title class="form-control" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="Açıklama">Alt Başlık</label>
+                    @* <input type="text" asp-for="Description" class="form-control" placeholder="Açıklama"> *@
+                    <textarea  cols="30" rows="5" asp-for="Description1" class="form-control-file" placeholder="açıklama giriniz"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="Açıklama">Açıklama</label>
+                    @* <input type="text" asp-for="Description" class="form-control" placeholder="Açıklama"> *@
+                    <textarea cols="30" rows="5" asp-for="Description2" class="form-control-file" placeholder="açıklama giriniz"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="Açıklama">İkon</label>
+                    @* <input type="text" asp-for="Description" class="form-control" placeholder="Açıklama"> *@
+                    <input type="text" asp-for="Icon" asp-action="addAttention" class="form-control-file" placeholder="Resim uzantısını giriniz"  />
+                </div>
+
+                @* <div class="form-group">
+                <label>File upload</label>
+                <input type="file" name="img[]" class="file-upload-default">
+                <div class="input-group col-xs-12">
+                <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                <span class="input-group-append">
+                <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                </span>
+                </div> *@
+                @* </div> *@
+
+                @* <div class="form-group">
+                <label for="exampleTextarea1">Textarea</label>
+                <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                </div> *@
+                <br />
+                <button class="btn btn-primary mr-2">Ekle</button>
+                <a href="/Attention/index" class="btn btn-primary mr-2">Vazgeç</a>
+            </form>
+        </div>
+    </div>
+</div>

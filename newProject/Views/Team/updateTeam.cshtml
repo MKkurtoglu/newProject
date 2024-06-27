@@ -1,0 +1,45 @@
+﻿@model EntitiyLayer.Concrete.Team
+@{
+    ViewData["Title"] = "updateTeam";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Personel Güncelleme Sayfası</h4>
+            <form asp-action="updateTeam" asp-controller="Team" method="post">
+
+                @*@Html.Label("Service ID")
+                @Html.TextBoxFor(x=>x.ServiceID,new {@class = "form-control"})*@
+                @Html.HiddenFor(x => x.TeamID)
+                @Html.Label("Personel Adı")
+                <input type="text" asp-for="PersonName" class="form-control" />
+                <span asp-validation-for="PersonName" class="text-danger"></span>
+                <br />
+                @Html.Label("Görev Açıklama")
+                <input type="text" asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+
+                <br />
+                @Html.Label("Personel Resim")
+                <input type="text" asp-for="ImageURL" class="form-control" />
+                <span asp-validation-for="ImageURL" class="text-danger"></span>
+
+                <br />
+                @Html.Label("Personel Facebook")
+                <input type="text" asp-for="FacebookURL" class="form-control" />
+                <br />
+                @Html.Label("Personel Website")
+                <input type="text" asp-for="WebsiteURL" class="form-control" />
+                <br />
+                @Html.Label("Personel Twitter")
+                <input type="text" asp-for="TwitterURL" class="form-control" />
+                <br />
+
+                <button class="btn btn-danger">Personel Güncelle</button>
+            </form>
+        </div>
+    </div>
+</div>
+

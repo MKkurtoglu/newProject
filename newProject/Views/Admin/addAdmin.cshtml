@@ -1,0 +1,31 @@
+﻿@model EntitiyLayer.Concrete.Admin
+@{
+    ViewData["Title"] = "addAdmin";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Admin Ekleme Sayfası</h4>
+            <p class="card-description">
+                Admin Eklemek için aşağıdaki boşlukları doldurunuz
+            </p>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label for="Başlık">Başlık</label>
+                    <input type="text" asp-for="userName" class="form-control" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="Açıklama">Şifre</label>
+                    <input type="text" asp-for="password" class="form-control" placeholder="Şifre">
+                </div>
+
+
+
+                
+                <button class="btn btn-primary mr-2"> Admin Ekle</button>
+                <a href="/Admin/index" class="btn btn-primary mr-2">Vazgeç</a>
+            </form>
+        </div>
+    </div>
+</div>

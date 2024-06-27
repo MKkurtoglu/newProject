@@ -1,0 +1,35 @@
+﻿@model EntitiyLayer.Concrete.SocialMedia
+@{
+    ViewData["Title"] = "updateNews";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Sosyal Medya Güncelleme Sayfası</h4>
+            <form asp-action="updateSocial" asp-controller="SocialMedia" method="post">
+
+                @*@Html.Label("Service ID")
+                @Html.TextBoxFor(x=>x.ServiceID,new {@class = "form-control"})*@
+                @Html.HiddenFor(x => x.SocialMediaID)
+                @Html.HiddenFor(x => x.Icon)
+                
+
+                @Html.Label("Service Adı")
+                <input type="text" asp-for="Title" class="form-control" />
+                <br />
+                @Html.Label("Sosyal Medya URL ")
+                <input type="text" asp-for="Url" class="form-control" />
+
+                
+
+                <br />
+                @* @Html.Label("Service Resim")
+                <input type="text" asp-for="ım" class="form-control" />
+                <br /> *@
+                <button class="btn btn-danger">Sosyal Medya Güncelle</button>
+            </form>
+        </div>
+    </div>
+</div>
